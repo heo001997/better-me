@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => {
   const production = mode === 'production'
 
   return {
+    server: {
+      port: 5173,
+      strictPort: true,
+      hmr: {
+        port: 5173,
+      },
+    },
     build: {
       emptyOutDir: true,
       outDir: 'build',
